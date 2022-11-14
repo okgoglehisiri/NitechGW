@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+  }
+  .des-img {
+    display: flex;
+    vertical-align: middle;
+    border: solid 1px #000;
+  }
+  .des-img .exp {
+    width: 100%;
+    margin-left: 15px;
+    border: solid 1px #000;
+  }
+  .des-img .title{
+    margin: 15px;
+    padding: 1px;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .des-img .des{
+    margin: 40px 16px 10px;
+    padding: 0;
+  }
