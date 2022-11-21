@@ -8,27 +8,15 @@
           <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp" align="center">
       <thead>
         <tr>
-          <th class="mdl-data-table__cell--non-numeric">Material</th>
-          <th>Quantity</th>
-          <th>Unit price</th>
+		<th class="mdl-data-table__cell--non-numeric">Material</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td><input type="checkbox" name="zairyou" value="にんじん">にんじん<br></td>
-          <td>25</td>
-          <td>$2.90</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" name="zairyou" value="じゃがいも">じゃがいも<br></td>
-          <td>50</td>
-          <td>$1.25</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" name="zairyou" value="鶏もも肉">鶏もも肉<br></td>
-          <td>10</td>
-          <td>$2.35</td>
-        </tr>
+        <th:block th:each="list : ${list1}">
+      <tr>
+    <td><input type="checkbox" name="zairyou" value="${list}" >[[${list}]]<br></td> 
+    </tr>
+</th:block>
       </tbody>
     </table>
     <!-- Accent-colored raised button with ripple -->
