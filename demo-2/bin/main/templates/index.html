@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>冷蔵庫</title>
+<link rel="stylesheet" href="page1.css">
+</head>
+<body>
+  <h1>冷蔵庫の中身リスト</h1>
+  <form method="post"  action="/saveCheckBox">
+    <label th:each="item:${foodCheckBox}" th:object="${food}">
+      <input type="checkbox" name="selectedfood"
+       th:value="${item.key}" th:text="${item.value}"
+       th:field="*{selectfoods}"/>
+    </label>
+    <div>
+      <input type="submit" value="送信">
+    </div>
+  </form>
+</body>
+</html>
